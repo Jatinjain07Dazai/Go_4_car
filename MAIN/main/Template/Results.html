@@ -1,0 +1,48 @@
+{% extends 'Basem.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'res.css' %}">
+{% endblock %}
+{% block script%}
+<script type="text/javascript" src="{% static 're.js' %}"></script>
+{% endblock %}
+
+{% block content  %}
+<section>
+	<ul>
+		<l1><i><a href="check"><img style="margin: 10px; height: 40px; width:40px" src="{% static 'previous.png' %}"></img></a></i></l1>
+	</ul>
+	<header>Plagcheck</header>
+	
+	<div id="circle">
+		<h2>{{simm}} %</h2>
+	</div>
+	
+	
+	<h1 hidden>Your Result are Compiling.</h1>
+	
+	<div id="viewarea">
+	<div class="distext" id="target"><h3> Your Input </h3> <br/>  {{text}} </div>
+	<div class="distext" id="src">
+		<h3> Similar Content</h3> <br/>
+		<div>{{sub}}<br/> {{Aut}} <br/> {{time}} <br/> {{date}} <br/> {{context}} <br/></div>
+	</div>
+	<div class="distext" id="result">
+	<h3> Common Instances </h3><br/>
+	<div> 
+	{% for each in res %}
+	{% for e in each %}
+	{{e}} <br/>
+	{% endfor %}
+	<br/>
+	{% endfor %}
+
+	</div>
+	</div>
+	</div>
+
+
+
+</section>
+{% endblock%}

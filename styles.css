@@ -16,6 +16,8 @@
   box-sizing: border-box;
 }
 
+
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -755,4 +757,10 @@ nav {
 .snip1418:hover .add-to-cart i,
 .snip1418.hover .add-to-cart i {
   background-color: #2980b9;
+}
+
+
+
+#icon{
+  width: 40%;
 }
